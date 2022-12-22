@@ -12,6 +12,17 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script>
+    function go_delete(id){
+        var user_pass = document.getElementById('user_pass').value;
+        if (user_pass != "") {
+            var usr = '/' + id + '/' + user_pass;
+            window.location = usr;
+        } else{
+            alert("請填刪除密碼");
+        }
+    }
+</script>
 <style>
 h1, h2, h3, h4, h5, p, div {
     font-family: 微軟正黑體;
