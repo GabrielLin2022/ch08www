@@ -12,7 +12,7 @@ def index(request, pid=None, del_pass=None):
     #指定 moods 為物件 => <QuerySet [<Mood: 開心>, <Mood: 難過>]
     #-pub_time:只要是舊的資料往下沉，新的資料會在最上面
     # 我把POST 裡面的物件 用 是否已啟用做篩選，用 出版時間，做排序，並列出前30項
-    posts = models.Post.object.filter(enabled = True).order_by('-pub_time')[:30]
+    posts = models.Post.objects.filter(enabled = True).order_by('-pub_time')[:30]
     moods = models.Mood.objects.all()
 
     # TODO 此欄位為 CREATE - 建立貼文後，資料裡 enable = False => 要管理員手動開啟後 改成True => 所以提示才會說需要管理
