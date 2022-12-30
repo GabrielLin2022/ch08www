@@ -1,1 +1,1 @@
-web: gunicorn ch08www01.wsgi 
+web: gunicorn ch08www.wsgi 
